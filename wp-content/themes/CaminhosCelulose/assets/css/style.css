@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+            --primary: #1C2849 !important;
+            --secondary: #5FA240 !important;
+            --light-bg: #f8f9fa !important;
+        }
+
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            color: var(--primary);
+            overflow-x: hidden;
+        }
+
+        .bg-primary {background-color: var(--primary) !important;}
+        .bg-secondary {background-color: var(--secondary) !important;}
+        .bg-light-bg {background-color: var(--light-bg) !important;}
+
+        .text-primary {color: var(--primary) !important;}
+        .text-secondary {color: var(--secondary) !important;}
+
+
+
+        /* --- Header & Nav --- */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand img {
+            max-height: 65px;
+        }
+
+        .nav-link {
+            color: var(--primary)!important;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 10px 15px !important;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--secondary) !important;
+        }
+
+        #boletim .nav-link.active {
+            color:#fff !important;
+        }
+               
+        .navbar-nav .nav-link.active {
+            color: var(--secondary) !important;
+            font-weight: 700; 
+        }
+
+        .nav-pills {
+            --bs-nav-pills-link-active-bg: var(--primary) !important;
+            --bs-nav-pills-link-active-color: #fff !important;
+        }
+        
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0; 
+            }
+
+            
+            .dropdown-menu {
+                animation: fadeIn 0.3s;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .whatsapp_float{
+            position: fixed;
+            right: 25px;
+            bottom: 30px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+        }
+
+        .dropdown-menu {
+            border: none;
+            border-top: 3px solid var(--secondary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item {
+            color: var(--primary);
+            font-size: 0.9rem;
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--secondary);
+            color: #fff;
+        }
+
+        #hero-section {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-caption {
+            bottom: 30%;
+            /* Subir o texto para não ficar coberto pela máscara verde */
+            left: 10%;
+            text-align: left;
+            z-index: 10;
+        }
+
+        .carousel-caption h2 {
+            font-weight: 700;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        
+       
+        /* --- Seções Gerais --- */
+        .section-padding {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin-top: 10px;
+        }
+
+        /* --- Cards e Serviços --- */
+        .info-card {
+            border: none;
+            background: #fff;
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            height: 100%;
+            border-bottom: 4px solid transparent;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        .icon-box {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        /* --- Números --- */
+        .numbers-section {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        .counter-box h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+
+        .obras-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .obras-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border: 2px solid var(--secondary);
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+
+        footer {
+            background-color: var(--primary);
+            color: #fff;
+            padding-top: 60px;
+            border-top: 5px solid var(--secondary);
+        }
+
+        footer h5 {
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        footer a:hover {
+            color: #fff;
+            padding-left: 5px;
+            transition: 0.3s;
+        }
+
+          #rodape a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: #fff;
+            padding: 10px 25px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #4a8030;            
+            border-color: #4a8030;
+            color: #fff;
+        }
+
+        .btn-outline-primary {
+            --bs-btn-color: var(--primary) !important;
+            --bs-btn-border-color: var(--primary) !important;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: var(--primary) !important;
+            --bs-btn-hover-border-color: var(--primary) !important;
+            --bs-btn-focus-shadow-rgb: 13, 110, 253;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: var(--primary) !important;
+            --bs-btn-active-border-color: var(--primary) !important;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: var(--primary) !important;
+            --bs-btn-disabled-bg: transparent;
+            --bs-btn-disabled-border-color: var(--primary) !important;
+            --bs-gradient: none;
+        }
+
+
+        /* --- Configuração do Slider --- */
+        #hero-section {
+            position: relative;
+            overflow: hidden;
+            height: 80vh; /* Altura da seção */
+            min-height: 600px;
+        }
+
+        .hero-slide {
+            height: 80vh;
+            min-height: 600px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Estilo do Texto (Caption) */
+        .hero-caption {
+            position: relative;
+            z-index: 5; /* Texto acima do fundo, mas abaixo da nav */
+            color: #fff; /* Assumindo texto branco, mude se necessário */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra para leitura */
+        }
+
+        .hero-caption h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        /* Altura e Fundo do Slide */
+        .slide-item {
+            height: 80vh; /* Altura da tela */
+            min-height: 600px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Overlay para garantir leitura do texto sobre qualquer foto */
+        .overlay-dark {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, rgba(28,40,73,0.8) 0%, rgba(28,40,73,0.3) 100%);
+            z-index: 1;
+        }
+
+        /* Conteúdo (Texto) acima do Overlay */
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Botão Personalizado */
+        .btn-custom {
+            background-color: #5FA240; /* Verde */
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #4a8030;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* --- CUSTOMIZAÇÃO OWL CAROUSEL (CORRIGIDO) --- */
+
+        /* 1. SETAS DE NAVEGAÇÃO */
+        .owl-theme .owl-nav {
+            margin-top: 0;
+        }
+       
+        .owl-theme .owl-nav [class*='owl-'] {
+            background: transparent !important; 
+            border: none !important;            
+            color: rgba(255, 255, 255, 0.811) !important; 
+            font-size: 1.5rem !important;        
+            padding: 0 !important;
+            margin: 0 !important;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.3s;
+            outline: none;
+        }
+
+        .owl-theme .owl-nav [class*='owl-']:hover {
+            background: transparent !important;
+            color: #5FA240 !important;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        /* Posicionamento */
+        .owl-prev { left: 30px; }
+        .owl-next { right: 30px; }
+
+
+        /* 2. DOTS / PAGINAÇÃO  */
+        .owl-theme .owl-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 5; 
+        }
+
+        .owl-theme .owl-dots .owl-dot {
+            background: transparent !important;
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        
+        .owl-theme .owl-dots .owl-dot span {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.811) !important; 
+            margin: 5px 6px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        /* Estado Ativo (Bolinha esticada verde) */
+        .owl-theme .owl-dots .owl-dot.active span {
+            background: #5FA240 !important;
+            width: 30px; /* Estica */
+            border-radius: 10px;
+            opacity: 1;
+        }
+        
+
+        .section-blog {padding: 110px 0px 20px 0px !important;}
+
+        /* --- PAGE HEADER (Topo Interno) --- */
+        .page-header {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;         
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;            
+            color: #fff;
+            padding: 110px 0px 20px 0px !important;
+        }
+        
+                
+        /* Máscara escura sobre a foto do header */
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(28, 40, 73, 0.85); 
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+            text-align: start;
+        }
+        
+        #blog-interna, #galeria .breadcrumb-item+.breadcrumb-item::before {
+        color: var(--primary) !important;}
+
+        .breadcrumb-item+.breadcrumb-item::before {
+        color: #ffffff80 !important;}
+
+    /* Efeitos da Galeria */
+        .hover-up {
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            will-change: transform; /* Melhora a performance da animação */
+        }
+
+        .hover-up:hover {
+            transform: translateY(-8px) !important; /* Sobe 8 pixels */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important; /* Sombra mais destacada */
+            z-index: 10;
+        }
